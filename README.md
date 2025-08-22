@@ -40,4 +40,5 @@ Go to /docs
 # Clear cache
 ```bash
 find . -type d -name "__pycache__" -exec rm -r {} +
+find . -type d -name ".idea" -exec rm -r {} +
 ```
