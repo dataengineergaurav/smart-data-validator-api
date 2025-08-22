@@ -1,0 +1,35 @@
+id: smart-data-validator
+name: Smart Data Validator
+description: Suggests fixes for CSV validation errors
+mode: workflow
+workflow:
+  inputs:
+    query:
+      type: string
+      required: true
+      description: Summary of validation errors
+  steps:
+    - id: suggest_fixes
+      type: llm
+      name: Suggest Fixes
+      model: gpt-4o-mini
+      prompt: |
+        You are a data quality expert.
+        A CSV file failed validation with the following errors:
+
+        {{ inputs.query }}
+
+        Task:
+        - Suggest clear, actionable fixes
+        - Output as structured JSON
+        - JSON schema:
+          {
+            "fixes": [
+              {"error": "string", "suggestion": "string"}
+            ]
+          }
+
+  outputs:
+    result:
+      type: object
+      value: "{{ steps.suggest_fixes.output }}"

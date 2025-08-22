@@ -39,14 +39,18 @@ Go to /docs
 # Output
 ```json
 {
-  "validation": {
-    "is_valid": false,
-    "errors": ["Missing column: age", "Null values in required column: salary"]
-  },
-  "ai_suggestions": {
-    "message": "You can add 'age' column with integer values and fill missing salaries using median or industry benchmarks."
-  }
+  "fixes": [
+    {
+      "error": "Missing column: age",
+      "suggestion": "Add an 'age' column with integer values, ensuring no nulls."
+    },
+    {
+      "error": "Null values in required column: salary",
+      "suggestion": "Impute missing salaries using median salary or a default value."
+    }
+  ]
 }
+
 ```
 
 # Clear cache
