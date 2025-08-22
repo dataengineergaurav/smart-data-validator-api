@@ -36,6 +36,18 @@ Go to /docs
 
 ![alt text](image.png)
 
+# Output
+```json
+{
+  "validation": {
+    "is_valid": false,
+    "errors": ["Missing column: age", "Null values in required column: salary"]
+  },
+  "ai_suggestions": {
+    "message": "You can add 'age' column with integer values and fill missing salaries using median or industry benchmarks."
+  }
+}
+```
 
 # Clear cache
 ```bash
