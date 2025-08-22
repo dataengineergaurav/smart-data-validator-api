@@ -1,11 +1,10 @@
 from pydantic import BaseModel, Field
-from typing import List
+from typing import List, Literal
 
 class ColumnRule(BaseModel):
     name: str = Field(..., description="Column name")
-    age: int = Field(..., description="Column age in years")
-    salary: float = Field(..., description="Column salary in USD")
-    required: bool = True
+    dtype: Literal["string", "int", "float"] = Field(..., description="Expected data type")
+    required: bool = Field(default=True, description="Whether column is mandatory")
 
 class ValidationRequest(BaseModel):
     rules: List[ColumnRule]
