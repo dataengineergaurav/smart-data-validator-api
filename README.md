@@ -1,9 +1,13 @@
-# Install libraries
+# Smart Data Validator API
+
+A FastAPI service for validating CSV data and suggesting fixes using AI.
+
+## 📦 Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-# 📂 Project Structure 
+## 📂 Project Structure
 ```markdown
 smart-data-validator/
 │── app/
@@ -26,17 +30,15 @@ smart-data-validator/
 ├── .env                     # Secrets & configs
 ├── requirements.txt
 └── README.md
-
 ```
-# Run the FastAPI app 
+
+## 🚀 Run the FastAPI App
 ```bash
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
-Go to /docs
+Visit [http://localhost:8000/docs](http://localhost:8000/docs) for interactive API docs.
 
-![alt text](image.png)
-
-# Output
+## 📝 Example Output
 ```json
 {
   "fixes": [
@@ -50,11 +52,15 @@ Go to /docs
     }
   ]
 }
-
 ```
 
-# Clear cache
+## 🧹 Clear Cache/Temp Files
 ```bash
 find . -type d -name "__pycache__" -exec rm -r {} +
 find . -type d -name ".idea" -exec rm -r {} +
 ```
+
+## 🛠️ Development
+- Ubuntu 24.04.2 LTS
+- VS Code recommended
+

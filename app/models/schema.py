@@ -3,7 +3,8 @@ from typing import List
 
 class ColumnRule(BaseModel):
     name: str = Field(..., description="Column name")
-    dtype: str = Field(..., description="Expected data type")
+    age: int = Field(..., description="Column age in years")
+    salary: float = Field(..., description="Column salary in USD")
     required: bool = True
 
 class ValidationRequest(BaseModel):
