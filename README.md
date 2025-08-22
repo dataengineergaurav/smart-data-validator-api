@@ -1,4 +1,9 @@
-📂 Project Structure 
+# Install libraries
+```bash
+pip install -r requirements.txt
+```
+
+# 📂 Project Structure 
 ```markdown
 smart-data-validator/
 │── app/
@@ -22,4 +27,17 @@ smart-data-validator/
 ├── requirements.txt
 └── README.md
 
+```
+# Run the FastAPI app 
+```bash
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+Go to /docs
+
+![alt text](image.png)
+
+
+# Clear cache
+```bash
+find . -type d -name "__pycache__" -exec rm -r {} +
 ```

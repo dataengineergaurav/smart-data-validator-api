@@ -1,3 +1,6 @@
 pydantic
 requests
 pandas
+fastapi
+uvicorn
+python-multipart
