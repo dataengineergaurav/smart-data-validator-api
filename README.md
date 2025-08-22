@@ -37,7 +37,7 @@ smart-data-validator/
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 Visit [http://localhost:8000/docs](http://localhost:8000/docs) for interactive API docs.
-
+![alt text](image-1.png)
 ## 📝 Example Output
 ```json
 {
